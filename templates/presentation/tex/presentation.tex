@@ -1,0 +1,106 @@
+\documentclass{beamer}
+\usetheme{greeniot}
+\usepackage[utf8]{inputenc}
+\usepackage{hyperref}
+\usepackage{pgf}
+\usepackage{tikz}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{graphicx}
+
+\hypersetup{%
+	pdftitle={Title},
+	pdfauthor={Author},
+	pdfsubject={Sommerakademie der Studienstiftung, Leysin, 2016},
+	pdfcreator=pdflatex,
+	pdfproducer=pdflatex,
+	pdfnewwindow=true,
+	pdfpagemode=FullScreen,
+	pdfview=FitBH,
+	plainpages=false,
+	baseurl={./}
+}
+
+% Title Page
+\title[Short Title]{%
+	\Large Title\\
+	[5mm] \normalsize Sommerakademie in Leysin\\
+	AG 2 -- Effizientes Rechnen
+}
+\author[Short author]{Author}
+\institute[]{%
+	University of Awesomeness\\[3mm]
+}
+\date{August 2016}
+\titlegraphic{%
+	\vspace{5mm}%
+	\includegraphics[height=1.5cm]{logo_sdv.pdf}%
+}
+
+\begin{document}
+
+%---------------------------------------------------------------------- SLIDE -
+\begin{frame}
+	\titlepage
+\end{frame}
+
+%---------------------------------------------------------------------- SLIDE -
+\begin{frame}
+	\frametitle{Outline}
+	\tableofcontents
+\end{frame}
+
+%---------------------------------------------------------------------- SLIDE -
+\section{Gorgeous slides}
+
+% Show the table of contents again when a new section starts
+\AtBeginSection[]{%
+  \begin{frame}
+  \tableofcontents[currentsection]
+  \end{frame}
+}
+
+\subsection{Design guidelines}
+
+\begin{frame}{Bullet points}
+  \begin{itemize}
+    \item A: Bullet points are awesome!
+    \item B: C'mon really? Bullet points are so
+      \textbf<2->{\textcolor<2->{greeniot1}{2010}}
+    \item A: \alert{Get out!}
+    \item<2-> B: \dots a delayed response
+  \end{itemize}
+  \begin{center}
+    \uncover<3->{\Large \alert{\dots agreed to disagree\dots}}
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------- SLIDE -
+\section{The perfect presentation}
+\begin{frame}{Conclusion}
+  \begin{center}
+    You can do everything in the beamer class that you could do in a ``normal''
+    \LaTeX{} article (for example in the template \texttt{paper.tex}) and a
+    whole lot more.
+
+    \href{https://www.ctan.org/pkg/beamer}{\textbf{Here}} you'll find everything
+    you need to know!
+  \end{center}
+\end{frame}
+
+%---------------------------------------------------------------------- SLIDE -
+\begin{frame}
+  \begin{center}
+    \begin{tikzpicture}[scale=0.7]
+      \draw[line width=1.7mm, fill=greeniot2] (0,0) circle (3cm);
+      \filldraw (-1.3,1.2) circle (0.5cm);
+      \filldraw (1.3,1.2) circle (0.5cm);
+      \draw[line width=1.7mm] (-1.8, -1.3) to[bend right=40] (1.8,-1.3);
+    \end{tikzpicture}\\
+    \vspace{1cm}
+    {\huge\bfseries Thank you!}
+  \end{center}
+\end{frame}
+
+\end{document}
