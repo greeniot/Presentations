@@ -8,7 +8,6 @@ all: $(FILE).pdf
 
 $(FILE).pdf: $(DEPENDENCIES)
 	$(TEX) $(FILE).tex
-	$(BIB) $(FILE).aux
 	$(TEX) $(FILE).tex
 	$(TEX) $(FILE).tex
 
