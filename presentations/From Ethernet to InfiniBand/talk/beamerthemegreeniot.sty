@@ -1,0 +1,81 @@
+\ProvidesPackage{beamerthemegreeniot}
+
+\mode<presentation>
+\definecolor{whiteiot}{HTML}{FFFFFF}
+\definecolor{greyiot1}{HTML}{616161}
+\definecolor{greyiot2}{HTML}{EEEEEE}
+\definecolor{orangeiot}{HTML}{EF6C00}
+
+\definecolor{greeniot1}{HTML}{15975b}
+\definecolor{greeniot2}{HTML}{0F7043}
+
+% Alternative colorscheme
+% \definecolor{greeniot1}{HTML}{388E3C}
+% \definecolor{greeniot2}{HTML}{4CAF50}
+
+\beamertemplatelargetitlepage
+\beamertemplatelargepartpage
+\beamertemplatelargeframetitle
+\beamertemplatelargeblocks
+\beamertemplateplaintoc
+
+% use truly white background
+\setbeamercolor{background canvas}{bg=white}
+% do not show the navigation symbols
+\setbeamertemplate{navigation symbols}{}
+
+% the colorschemes
+\setbeamercolor{alerted text}{fg=orangeiot}
+\setbeamercolor*{palette primary}{fg=greeniot1,bg=whiteiot}
+\setbeamercolor*{palette secondary}{fg=greeniot2,bg=whiteiot}
+\setbeamercolor*{palette tertiary}{fg=whiteiot,bg=greeniot1}
+\setbeamercolor*{palette quaternary}{fg=greeniot2,bg=whiteiot}
+
+\setbeamercolor{footline}{fg=greeniot1,bg=greyiot2}
+\setbeamercolor*{normal text}{fg=black,bg=whiteiot}
+\setbeamercolor{alerted text}{fg=orangeiot}
+\setbeamercolor{structure}{fg=greeniot2}
+
+\setbeamercolor{frametitle}{bg=whiteiot}
+\setbeamercolor{frametitle right}{bg=whiteiot}
+\setbeamercolor{frametitle left}{fg=whiteiot,bg=orangeiot}
+
+\setbeamercolor{separation line}{bg=greeniot2}
+
+\useinnertheme{circles}
+\useoutertheme{infolines}
+
+\setbeamersize{text margin left=1em, text margin right=1em}
+
+% Headline
+\defbeamertemplate*{headline}{ritscher theme}{%
+  \hbox{%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,right]%
+      {section in head/foot}%
+      \usebeamerfont{section in head/foot}\insertsectionhead\hspace*{2ex}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[wd=.5\paperwidth,ht=2.25ex,dp=1ex,left]%
+      {subsection in head/foot}%
+      \usebeamerfont{subsection in head/foot}\hspace*{2ex}\insertsubsectionhead%
+    \end{beamercolorbox}%
+  }\par%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line head}%
+    \rule{0ex}{0.3ex}%
+  \end{beamercolorbox}%
+  \vskip0pt%
+}
+
+% Footline
+\defbeamertemplate*{footline}{ritscher theme}{%
+  \begin{beamercolorbox}[wd=\paperwidth]{upper separation line foot}%
+    \rule{0ex}{0.3ex}%
+  \end{beamercolorbox}%
+\begin{beamercolorbox}[wd=\paperwidth,ht=2.5ex,dp=1.15ex,center]{footline}%
+  \hbox to\paperwidth{%
+    \hskip3mm \insertshortauthor : \insertshorttitle \hfill%
+    \insertframenumber / \inserttotalframenumber \hskip1cm}%
+  \end{beamercolorbox}%
+  \begin{beamercolorbox}[wd=\paperwidth]{lower separation line foot}%
+    \rule{0ex}{0.3ex}%
+  \end{beamercolorbox}%
+}
